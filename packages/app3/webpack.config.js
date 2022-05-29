@@ -40,7 +40,8 @@ module.exports = {
         './Button': './src/components/Button',
         './Toast': './src/components/Toast'
       },
-      shared: { react: { singleton: true, requiredVersion: deps['react'] }, 'react-dom': { singleton: true },'bootstrap': { singleton: true },'react-bootstrap': { singleton: true } },
+      shared: { react: { singleton: true, requiredVersion: deps['react'] }, 'react-dom': { singleton: true },
+      'bootstrap': { singleton: true },'react-bootstrap': { singleton: true } },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',

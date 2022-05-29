@@ -30,7 +30,6 @@ module.exports = {
       }
     ],
   },
-  //http://localhost:3002/remoteEntry.js
   plugins: [
     new ModuleFederationPlugin({
       name: 'app1',
@@ -48,9 +47,6 @@ module.exports = {
 
 function getRemoteEntryUrl(port) {
   const { CODESANDBOX_SSE, HOSTNAME = '' } = process.env;
-
-  // Check if the example is running on codesandbox
-  // https://codesandbox.io/docs/environment
   if (!CODESANDBOX_SSE) {
     return `//localhost:${port}/remoteEntry.js`;
   }
